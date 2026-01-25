@@ -1,0 +1,69 @@
+<app-alert 
+    [visibility]="alertVisibility()"
+    [color]="alertColor()">
+    {{alertMessage()}}
+</app-alert>
+
+<!-- Register Form -->
+<form class="flex flex-col gap-2" [formGroup]="form" (ngSubmit)="submitForm()">
+
+    <!-- Name -->
+    <label class="mt-2">Name</label>
+    <app-input 
+        [control]="form.controls.name"
+        placeholder="Enter Name"
+        [name]="inputConfig.name">
+    </app-input>
+
+    <!-- Email -->
+    <label class="mt-2">Email</label>
+    <app-input
+        [control]="form.controls.email"
+        type="email"
+        placeholder="Enter Email"
+        [name]="inputConfig.email">
+    </app-input>
+
+    <!-- Age -->
+    <label class="mt-2">Age</label>
+    <app-input
+        [control]="form.controls.age"
+        type="number"
+        placeholder="Enter Age"
+        [name]="inputConfig.age">
+    </app-input>
+
+    <!-- Password -->
+    <label class="mt-2">Password</label>
+    <app-input
+        [control]="form.controls.password"
+        type="password"
+        placeholder="Enter Password"
+        [name]="inputConfig.password">
+    </app-input>
+
+    <!-- Confirm Password -->
+    <label class="mt-2">Confirm Password</label>
+    <app-input
+        [control]="form.controls.confirmPassword"
+        type="password"
+        placeholder="Enter Password"
+        [name]="inputConfig.default">
+    </app-input>
+
+    <!-- Phone Number -->
+    <label class="mt-2">Phone Number</label>
+    <app-input
+        [control]="form.controls.phoneNumber"
+        placeholder="09"
+        [phoneNumberValidation]="true"
+        [name]="inputConfig.phoneNumber">
+    </app-input>
+
+    <button 
+        class="rounded-sm cursor-pointer bg-indigo-400 p-2 mt-2 font-bold"
+        [disabled]="form.invalid"
+        [ngClass]="{'opacity-50': form.invalid}">
+        Submit
+    </button>
+</form>
