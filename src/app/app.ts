@@ -1,9 +1,11 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Modal } from './shared/modal/modal';
+import { Nav } from './core/nav/nav';
+import { AuthModal } from './user/auth-modal/auth-modal';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [Nav, AuthModal],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
