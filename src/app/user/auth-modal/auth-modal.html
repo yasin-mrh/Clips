@@ -5,25 +5,15 @@
              <p class="text-2xl">Your Account:</p>
              <div class="cursor-pointer text-4xl">&#215;</div>
          </div>
-    
-        <!-- Authentication Buttons -->
-        <div class="flex justify-between mt-2 gap-4 text-white">
-            <!-- Register Button -->
-            <button
-                class="flex-1 bg-indigo-400 rounded font-bold p-2 cursor-pointer"
-            >
-                Register
-            </button>
-    
-            <!-- Login Button-->
-            <button
-                class="flex-1 bg-indigo-400 rounded font-bold p-2 cursor-pointer"
-            >
-                Login
-            </button>
-        </div>
-    
-        <app-register></app-register>
-        <app-login></app-login>
+         
+         <app-tabs-container>
+            <app-tab tabTitle="Login">
+                <app-login></app-login>
+            </app-tab>
+
+            <app-tab tabTitle="Register">
+                <app-register></app-register>
+            </app-tab>
+         </app-tabs-container>
     </div>
 </app-modal>

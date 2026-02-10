@@ -1,0 +1,12 @@
+<nav class="flex flex-row gap-4">
+    @for (tab of tabs(); track $index) {
+        <a
+            class="flex-1 p-2 bg-indigo-400 text-white rounded-md
+                px-2 font-bold text-center"
+            href="#"
+            (click)="selectTab(tab)">
+            {{tab.tabTitle()}}
+        </a>
+    }
+</nav>
+<ng-content></ng-content>

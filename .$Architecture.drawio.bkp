@@ -1,0 +1,31 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.6 Chrome/140.0.7339.249 Electron/38.8.0 Safari/537.36" version="29.3.6">
+  <diagram name="Page-1" id="kmwbnXbJakwoCXP-gc-f">
+    <mxGraphModel dx="1780" dy="1053" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Avw1QQGIiyoPVH7KZS6a-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=26;fillColor=#dae8fc;strokeColor=#6c8ebf;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;fontColor=#000099;" value="Auth Modal" vertex="1">
+          <mxGeometry height="650" width="550" x="100" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Avw1QQGIiyoPVH7KZS6a-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=26;fillColor=#ffe6cc;strokeColor=#d79b00;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;fontColor=#CC6600;" value="Tabs Container" vertex="1">
+          <mxGeometry height="548" width="472.5" x="138.75" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="Avw1QQGIiyoPVH7KZS6a-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=26;fillColor=#f8cecc;strokeColor=#b85450;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;fontColor=#FF0000;" value="Tab" vertex="1">
+          <mxGeometry height="403" width="187" x="153" y="167" as="geometry" />
+        </mxCell>
+        <mxCell id="Avw1QQGIiyoPVH7KZS6a-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=26;fillColor=#f8cecc;strokeColor=#b85450;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;fontColor=#FF0000;" value="Tab" vertex="1">
+          <mxGeometry height="403" width="187" x="410" y="167" as="geometry" />
+        </mxCell>
+        <mxCell id="Avw1QQGIiyoPVH7KZS6a-15" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=26;fillColor=#e1d5e7;strokeColor=#9673a6;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;fontColor=#6600CC;" value="Register&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="310" width="120" x="186.5" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="Avw1QQGIiyoPVH7KZS6a-20" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=26;fillColor=#e1d5e7;strokeColor=#9673a6;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;fontColor=#6600CC;" value="&lt;div&gt;Login&lt;/div&gt;" vertex="1">
+          <mxGeometry height="310" width="120" x="443.5" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="Avw1QQGIiyoPVH7KZS6a-21" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Liberation Serif;fontSize=30;" value="&lt;span&gt;&lt;font&gt;Hint: Child elements will be &lt;b&gt;&#39;Projected&lt;/b&gt;&#39; into parent components&lt;/font&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="780" x="20" y="1010" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
