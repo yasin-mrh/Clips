@@ -4,6 +4,7 @@ import { Register } from '../register/register';
 import { Login } from '../login/login';
 import { TabsContainer } from '../../shared/tabs-container/tabs-container';
 import { Tab } from '../../shared/tab/tab';
+import { ModalService } from '../../services/modal-service';
 
 @Component({
   selector: 'app-auth-modal',
@@ -11,4 +12,6 @@ import { Tab } from '../../shared/tab/tab';
   templateUrl: './auth-modal.html',
   styleUrl: './auth-modal.css',
 })
-export class AuthModal {}
+export class AuthModal {
+  modal = inject(ModalService);
+}
