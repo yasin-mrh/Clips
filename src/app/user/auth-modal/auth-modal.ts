@@ -12,6 +12,4 @@ import { ModalService } from '../../services/modal-service';
   templateUrl: './auth-modal.html',
   styleUrl: './auth-modal.css',
 })
-export class AuthModal {
-  modal = inject(ModalService);
-}
+export class AuthModal {}
