@@ -10,12 +10,7 @@ export const appConfig: ApplicationConfig = {
     provideBrowserGlobalErrorListeners(),
     provideRouter(routes),
     provideFirebaseApp(() => initializeApp({
-      apiKey: "AIzaSyD0jZxdopJgNeFvt1kYKFhZ4fvXBmAm4Fg",
-      authDomain: "clips-f1b06.firebaseapp.com",
-      projectId: "clips-f1b06",
-      storageBucket: "clips-f1b06.firebasestorage.app",
-      messagingSenderId: "372664478718",
-      appId: "1:372664478718:web:26fa1a4abbe1ea7e082eaf"
+      // Placeholder for Firebase configuration object
     })),
     provideFirestore(() => getFirestore())
   ]
