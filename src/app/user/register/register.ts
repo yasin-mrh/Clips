@@ -1,8 +1,9 @@
-import { Component, signal } from '@angular/core';
-import { ReactiveFormsModule, FormGroup, FormControl } from '@angular/forms';
+import { Component, inject, signal } from '@angular/core';
+import { ReactiveFormsModule, NonNullableFormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { Input } from '../../shared/input/input';
 import { Alert } from '../../shared/alert/alert';
+import { AuthService } from '../../services/auth/auth-service';
 
 @Component({
   selector: 'app-register',
@@ -11,31 +12,49 @@ import { Alert } from '../../shared/alert/alert';
   styleUrl: './register.css'
 })
 export class Register {
-  registerForm = new FormGroup({
-    name: new FormControl('', [Validators.required, Validators.minLength(3)]),
+  PASSWORD_REGEX = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+  PASSWORD_ERROR_MESSAGE = `Password must contain:
+  • At least 8 characters
+  • At least one uppercase letter
+  • At least one lowercase letter
+  • At least one number`;
 
-    email: new FormControl('', [Validators.required, Validators.email]),
+  fb = inject(NonNullableFormBuilder);
+  auth = inject(AuthService);
 
-    phoneNumber: new FormControl('', [Validators.required, Validators.minLength(11),
-      Validators.maxLength(11)]),
+  registerForm = this.fb.group({
+    name: ['', [Validators.required]],
+    email: ['', [Validators.required, Validators.email]],
+    age: [18, [Validators.required, Validators.min(15), Validators.max(150)]],
+    phoneNumber: ['', [Validators.required, Validators.minLength(11), Validators.maxLength(11)]],
+    password: ['', [Validators.required, Validators.pattern(this.PASSWORD_REGEX)]],
+    confirmPassword: ['', [Validators.required]],
+  })
 
-    password: new FormControl('', [Validators.required,
-      Validators.pattern('^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$')]),
+  alertVisible = signal(false);
+  alertMessage = signal('');
+  alertColor = signal('blue');
 
-    confirmPassword: new FormControl('', [Validators.required]),
-  });
+  inSubmission = signal(false);
+  
+  async register() {
+    this.alertVisible.set(true);
+    this.alertMessage.set('Please wait... Your Account is being created.');
+    this.alertColor.set('blue');
+    
+    this.inSubmission.set(true);
 
-  showAlert = signal(false);
+    try {
+      await this.auth.createUser(this.registerForm.getRawValue())
+    } catch(error) {
+        this.alertMessage.set('Unexpecetd error happened!');
+        this.alertColor.set('red');
 
-  readonly passwordRules = `
-        Password must contain:
-        • At least 8 characters
-        • At least one uppercase letter
-        • At least one lowercase letter
-        • At least one number`;
+        this.inSubmission.set(false);
 
-  submitForm() {
-    console.log("User is Registered!!!");
-    this.showAlert.set(true);
+        return;
+      }
+      this.alertColor.set('green');
+      this.alertMessage.set('Your account is created successfully!');
   };
 }
