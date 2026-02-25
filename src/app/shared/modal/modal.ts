@@ -4,7 +4,7 @@ import { Component,
   input,
   viewChild,
   AfterViewInit } from '@angular/core';
-import { ModalService } from '../../services/modal-service';
+import { ModalService } from '../../services/modal/modal-service';
 
 @Component({
   selector: 'app-modal',
