@@ -14,7 +14,7 @@ interface ILoginData {
 })
 export class Login {
   
-  loginModel = signal<ILoginData>({
+  private loginModel = signal<ILoginData>({
     email: '',
     password: ''
   })
@@ -23,11 +23,12 @@ export class Login {
     // Apply validators on 'Email' field
     required(schemaPath.email),
     email(schemaPath.email),
+
     // Apply validators on 'Password' field
     required(schemaPath.password)
   });
 
-  onSubmit(e: Event) {
+  login(e: Event) {
     console.log("Login opeartion completed!");
     e.preventDefault();
   }
