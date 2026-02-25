@@ -8,9 +8,10 @@ import { Component, input } from '@angular/core';
   styleUrl: './alert.css',
 })
 export class Alert {
+  message = input('');
   color = input('blue');
 
   get getColor() {
-    return `bg-${this.color().toLowerCase()}-400`;
+    return `bg-${this.color().toLowerCase()}-700`;
   };
 }
